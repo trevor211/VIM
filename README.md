@@ -6,26 +6,41 @@
 
 ## 功能
 
--- 支持代码索引(gtags & ctags)
--- 支持lsp
--- 支持文件搜索
--- 支持函数查找
--- 等等
+- 支持代码索引(gtags & ctags)
+- 支持lsp
+- 支持文件搜索
+- 支持函数查找
+- 等等
 
 ## 依赖
 
 - vim8
 - gtags
 - nodejs
+- yarn
 - clangd
 - ccls
 
 ## 安装
 
-git clone <https://github.com/trevor211/VIM.git>
+```
+git clone https://github.com/trevor211/VIM.git
 mv VIM ~/.vim
 cp ~/.vim/.vimrc ~/.vimrc
-打开vim, 执行:PlugInstall
+打开vim:
+    1,  执行: PlugInstall
+    2,  执行: call coc#util#install()
+关闭vim，再次进入，会自动安装vimrc中配置好的coc extensions
+```
+
+### 可能会遇到的问题
+1、[coc.nvim] Unable to load global extension at /home/xxx/.config/coc/extensions/node_modules/coc-ccls: main file ./lib/extension.js not found, you may need t
+o build the project. 
+解决方法：
+```
+cd ~/.config/coc/extensions/node_modules/coc-ccls
+ln -s node_modules/ws/lib lib
+```
 
 ## centos7安装vim8
 

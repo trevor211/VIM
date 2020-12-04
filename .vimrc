@@ -7,7 +7,7 @@ set relativenumber "设置相对行号
 set cc=81 "高亮第81列
 filetype plugin indent on
 syntax on
-set tabstop=4                   " tab width
+set tabstop=4                  " tab width
 set shiftwidth=4
 set softtabstop=4               " 按退格键时可以一次删掉4个空格
 set expandtab                   " 如果此时需要输入真正的tab，则输入Ctrl+V, tab，在windows下是Ctrl+Q, tab
@@ -65,12 +65,8 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:coc_global_extensions = [
             \ 'coc-marketplace',
-            \ 'coc-git',
             \ 'coc-format-json',
-            \ 'coc-ccls',
             \ 'coc-vimlsp',
-            \ 'coc-tsserver',
-            \ 'coc-sh',
             \ 'coc-json'
             \]
 call plug#begin('~/.vim/plugged')
@@ -94,9 +90,12 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'derekwyatt/vim-fswitch'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/AutoComplPop'
+
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -175,12 +174,24 @@ nnoremap <F2> :NERDTreeFind<CR>
 
 "derekwyatt/vim-fswitch
 nnoremap <Space>r :FSHere<CR>
+augroup mycppfiles
+  au!
+  au BufEnter *.h let b:fswitchdst  = 'cpp,cc,C'
+  au BufEnter *.cc let b:fswitchdst  = 'h'
+augroup END
 
 " vim-airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline#extensions#tagbar#enabled = 0 "与tagbar冲突，禁用airline的tagbar扩展
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#fnamemod = ':t'
+"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+"let g:airline#extensions#tagbar#enabled = 0 "与tagbar冲突，禁用airline的tagbar扩展
+
+"ultisnips
+nnoremap <leader>es :UltiSnipsEdit<cr>
+let g:UltiSnipsExpandTrigger       = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -245,9 +256,14 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
+let b:coc_diagnostic_disable = 1
 
 nnoremap <Space>] <C-w>v<C-]><C-w>x<C-w>l
 nnoremap <Space>q <C-w>q
+nnoremap w+ :resize +10<CR>
+nnoremap w- :resize -10<CR>
+nnoremap w> :vertical resize +10<CR>
+nnoremap w< :vertical resize -10<CR>
 
 fu! OpenTerminal()
     " open split windows on the topleft
@@ -255,3 +271,6 @@ fu! OpenTerminal()
     :call term_start('bash', {'curwin' : 1, 'term_finish' : 'close'})
 endf
 nnoremap <Space>t :call OpenTerminal()<cr>
+
+" 代码格式使用google c++ code style
+set equalprg=clang-format\ -style=google

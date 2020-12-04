@@ -25,7 +25,7 @@
 
 ```
 git clone https://github.com/trevor211/VIM.git
-mv VIM ~/.vim
+rm -rf ~/.vim && mv VIM ~/.vim
 cp ~/.vim/.vimrc ~/.vimrc
 打开vim:
     1,  执行: PlugInstall

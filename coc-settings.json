@@ -34,7 +34,7 @@
     "suggest.noselect": true,
     "suggest.enablePreselect": false,
     "suggest.triggerAfterInsertEnter": true,
-    "suggest.autoTrigger": "always",
+    "suggest.autoTrigger": "none",
     "suggest.timeout": 5000,
     "suggest.enablePreview": true,
     "suggest.floatEnable": true,

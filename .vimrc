@@ -65,12 +65,9 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:coc_global_extensions = [
             \ 'coc-marketplace',
-            \ 'coc-git',
             \ 'coc-format-json',
             \ 'coc-ccls',
             \ 'coc-vimlsp',
-            \ 'coc-tsserver',
-            \ 'coc-sh',
             \ 'coc-json'
             \]
 call plug#begin('~/.vim/plugged')

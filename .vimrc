@@ -140,7 +140,7 @@ let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 " 禁用 gutentags 自动加载 gtags 数据库的行为
-let g:gutentags_auto_add_gtags_cscope = 1
+let g:gutentags_auto_add_gtags_cscope = 0
 
 if !isdirectory(s:vim_tags)
     silent! call mkdir(s:vim_tags, 'p')
@@ -186,6 +186,11 @@ let mapleader = ","
 
 nnoremap <Space>] <C-w>v<C-]><C-w>x<C-w>l
 nnoremap <Space>q <C-w>q
+nnoremap w+ :resize +10<CR>
+nnoremap w- :resize -10<CR>
+nnoremap w> :vertical resize +10<CR>
+nnoremap w< :vertical resize -10<CR>
+
 
 fu! OpenTerminal()
     " open split windows on the topleft

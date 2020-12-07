@@ -7,8 +7,8 @@ set relativenumber "设置相对行号
 set cc=81 "高亮第81列
 filetype plugin indent on
 syntax on
-set tabstop=4                   " tab width
-set shiftwidth=4
+set tabstop=2                   " tab width
+set shiftwidth=2
 set softtabstop=4               " 按退格键时可以一次删掉4个空格
 set expandtab                   " 如果此时需要输入真正的tab，则输入Ctrl+V, tab，在windows下是Ctrl+Q, tab
 set showcmd                     " 输入的命令显示出来，看的清楚些
@@ -242,6 +242,7 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
+let b:coc_diagnostic_disable = 1
 
 nnoremap <Space>] <C-w>v<C-]><C-w>x<C-w>l
 nnoremap <Space>q <C-w>q

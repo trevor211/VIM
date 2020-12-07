@@ -245,6 +245,10 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 nnoremap <Space>] <C-w>v<C-]><C-w>x<C-w>l
 nnoremap <Space>q <C-w>q
+nnoremap w+ :resize +10<CR>
+nnoremap w- :resize -10<CR>
+nnoremap w> :vertical resize +10<CR>
+nnoremap w< :vertical resize -10<CR>
 
 fu! OpenTerminal()
     " open split windows on the topleft

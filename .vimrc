@@ -95,6 +95,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/AutoComplPop'
 
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+
 call plug#end()
 
 
@@ -178,6 +181,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tagbar#enabled = 0 "与tagbar冲突，禁用airline的tagbar扩展
+
+"ultisnips
+nnoremap <leader>es :UltiSnipsEdit<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

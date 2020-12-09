@@ -265,4 +265,4 @@ endf
 nnoremap <Space>t :call OpenTerminal()<cr>
 
 " 代码格式使用google c++ code style
-setlocal equalprg=clang-format\ -style=google
+set equalprg=clang-format\ -style=google

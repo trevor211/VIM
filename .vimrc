@@ -66,7 +66,6 @@ endif
 let g:coc_global_extensions = [
             \ 'coc-marketplace',
             \ 'coc-format-json',
-            \ 'coc-ccls',
             \ 'coc-vimlsp',
             \ 'coc-json'
             \]
@@ -184,6 +183,10 @@ let g:airline#extensions#tagbar#enabled = 0 "与tagbar冲突，禁用airline的t
 
 "ultisnips
 nnoremap <leader>es :UltiSnipsEdit<cr>
+let g:UltiSnipsExpandTrigger       = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

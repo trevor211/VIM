@@ -170,6 +170,11 @@ nnoremap <F2> :NERDTreeFind<CR>
 
 "derekwyatt/vim-fswitch
 nnoremap <Space>r :FSHere<CR>
+augroup mycppfiles
+  au!
+  au BufEnter *.h let b:fswitchdst  = 'cpp,cc,C'
+  au BufEnter *.cc let b:fswitchdst  = 'h'
+augroup END
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1

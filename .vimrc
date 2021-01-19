@@ -107,6 +107,8 @@ call plug#end()
 "Plug 'morhetz/gruvbox'
 colorscheme gruvbox
 set background=dark
+set t_Co=256
+syntax on
 
 " Yggdroot/LeaderF
 " Ctrl + p 打开文件搜索

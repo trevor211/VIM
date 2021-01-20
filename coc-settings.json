@@ -20,7 +20,9 @@
                 "cache": {
                     "directory": "/tmp/ccls"
                 }
-            }
+            },
+            "disableDiagnostics": true,
+            "progressOnInitialization": true
         }
     },
     "coc.preferences.hoverTarget": "preview",
@@ -82,6 +84,7 @@
     "diagnostic.virtualText": true,
     "codeLens.enable": true,
     "list.previewHighlightGroup": "Statement",
+    "list.previewSplitRight": true,
     "coc.preferences.formatOnSaveFiletypes": [
         "typescript",
         "html",

@@ -19,8 +19,15 @@
             "initializationOptions": {
                 "cache": {
                     "directory": "/tmp/ccls"
+                },
+                "index": {
+                    "threads": 1
                 }
             },
+            "trace.server": "off",
+            "detached": true,
+            "enable": true,
+            "disableDynamicRegister": false,
             "disableDiagnostics": true,
             "progressOnInitialization": true
         }

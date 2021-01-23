@@ -18,10 +18,13 @@
             ],
             "initializationOptions": {
                 "cache": {
-                    "directory": "~/.ccls_cache/ccls"
+                    "directory": ".ccls_cache/ccls"
                 },
                 "index": {
-                    "threads": 1
+                    "initialBlacklist": [
+                        "deps@*"
+                    ],
+                    "threads": 2
                 }
             },
             "trace.server": "off",

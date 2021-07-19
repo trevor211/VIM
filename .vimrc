@@ -276,3 +276,5 @@ nnoremap <Space>t :call OpenTerminal()<cr>
 
 " 代码格式使用google c++ code style
 set equalprg=clang-format\ -style=google
+nnoremap <C-k> ggvG$=''
+autocmd BufWrite *.cc,*.cpp,*.h silent! normal ggvG$=''

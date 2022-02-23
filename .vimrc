@@ -69,11 +69,13 @@ let g:coc_global_extensions = [
             \ 'coc-vimlsp',
             \ 'coc-json'
             \]
+let g:plug_timeout = 300
+let g:plug_threads = 16
 call plug#begin('~/.vim/plugged')
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'morhetz/gruvbox'      "配色
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 
 " 用于模糊查找文件或者函数,取代ctrlp与ctrlp-funky
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
@@ -87,12 +89,12 @@ Plug 'skywind3000/gutentags_plus'
 Plug 'skywind3000/vim-preview'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
-Plug 'majutsushi/tagbar'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/tagbar'
+Plug 'preservim/nerdtree'
 Plug 'derekwyatt/vim-fswitch'
+Plug 'vim-scripts/AutoComplPop'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-scripts/AutoComplPop'
 
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'

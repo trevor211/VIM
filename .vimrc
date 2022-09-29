@@ -74,6 +74,7 @@ let g:plug_threads = 16
 call plug#begin('~/.vim/plugged')
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'm-pilia/vim-ccls'
 Plug 'morhetz/gruvbox'      "配色
 Plug 'vim-syntastic/syntastic'
 
@@ -261,6 +262,10 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 let b:coc_diagnostic_disable = 1
+
+" vim-ccls
+let g:ccls_levels = 5
+nmap gh :CclsCallHierarchy<CR>
 
 nnoremap <Space>] <C-w>v<C-]><C-w>x<C-w>l
 nnoremap <Space>q <C-w>q

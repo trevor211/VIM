@@ -205,16 +205,22 @@ let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on cu
 " leader键换成","
 let mapleader = ","
 
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
+
 " Use tab for trigger completion with characters ahead and navigate.
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-function! s:check_back_space() abort
+function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
@@ -267,7 +273,7 @@ let b:coc_diagnostic_disable = 1
 let g:ccls_levels = 5
 nmap gh :CclsCallHierarchy<CR>
 
-nnoremap <Space>] <C-w>v<C-]><C-w>x<C-w>l
+nnoremap <Space>] <C-w>v<C-w>l<C-]>
 nnoremap <Space>q <C-w>q
 nnoremap w+ :resize +10<CR>
 nnoremap w- :resize -10<CR>

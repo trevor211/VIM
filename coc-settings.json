@@ -43,7 +43,7 @@
     "coc.source.around.firstMatch": false,
     "coc.source.buffer.firstMatch": false,
     "suggest.detailMaxLength": 60,
-    "suggest.noselect": false,
+    "suggest.noselect": true,
     "suggest.enablePreselect": false,
     "suggest.triggerAfterInsertEnter": true,
     "suggest.autoTrigger": "always",

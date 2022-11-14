@@ -99,6 +99,7 @@ Plug 'vim-scripts/AutoComplPop'
 
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'vim-autoformat/vim-autoformat'
 
 call plug#end()
 
@@ -291,3 +292,4 @@ nnoremap <Space>t :call OpenTerminal()<cr>
 set equalprg=clang-format\ -style=google
 nnoremap <C-k> ggvG$=''
 autocmd BufWrite *.cc,*.cpp,*.h silent! normal ggvG$=''
+autocmd BufWrite *.py :Autoformat

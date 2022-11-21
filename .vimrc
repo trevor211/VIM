@@ -93,7 +93,6 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'preservim/tagbar'
 Plug 'preservim/nerdtree'
 Plug 'derekwyatt/vim-fswitch'
-Plug 'vim-scripts/AutoComplPop'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 

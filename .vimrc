@@ -67,7 +67,9 @@ let g:coc_global_extensions = [
             \ 'coc-marketplace',
             \ 'coc-format-json',
             \ 'coc-vimlsp',
-            \ 'coc-json'
+            \ 'coc-json',
+            \ 'coc-jedi',
+            \ 'coc-go'
             \]
 let g:plug_timeout = 300
 let g:plug_threads = 16

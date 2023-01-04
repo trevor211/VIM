@@ -292,5 +292,8 @@ nnoremap <Space>t :call OpenTerminal()<cr>
 " 代码格式使用google c++ code style
 set equalprg=clang-format\ -style=google
 nnoremap <C-k> ggvG$=''
-autocmd BufWrite *.cc,*.cpp,*.h silent! normal ggvG$=''
+"autocmd BufWrite *.cc,*.cpp,*.h silent! normal ggvG$=''
 autocmd BufWrite *.py :Autoformat
+autocmd BufWrite *.go :Autoformat
+"在项目根目录下创建一个.clang-format，并指定style，例如：google
+autocmd BufWrite *.cpp,*.cc,*.h :Autoformat

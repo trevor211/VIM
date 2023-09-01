@@ -101,7 +101,6 @@ Plug 'derekwyatt/vim-fswitch'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-autoformat/vim-autoformat'
-Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
 call plug#end()
 
@@ -294,6 +293,10 @@ fu! OpenTerminal()
     :call term_start('bash', {'curwin' : 1, 'term_finish' : 'close'})
 endf
 nnoremap <Space>t :call OpenTerminal()<cr>
+
+"codeium.vim
+let g:codeium_no_map_tab = 1
+imap <script><silent><nowait><expr> <C-g> codeium#Accept()
 
 " 代码格式使用google c++ code style
 set equalprg=clang-format\ -style=google

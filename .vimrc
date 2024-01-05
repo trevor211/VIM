@@ -101,6 +101,9 @@ Plug 'derekwyatt/vim-fswitch'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-autoformat/vim-autoformat'
+Plug 'easymotion/vim-easymotion'
+
+"Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
 call plug#end()
 
@@ -294,9 +297,27 @@ fu! OpenTerminal()
 endf
 nnoremap <Space>t :call OpenTerminal()<cr>
 
-"codeium.vim
+" codeium.vim
 let g:codeium_no_map_tab = 1
 imap <script><silent><nowait><expr> <C-g> codeium#Accept()
+
+" vim-easymotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+"nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case-insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
 
 " 代码格式使用google c++ code style
 set equalprg=clang-format\ -style=google

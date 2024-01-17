@@ -35,6 +35,7 @@
             "progressOnInitialization": true
         }
     },
+    "coc.source.buffer.disableSyntaxes": [],
     "coc.preferences.hoverTarget": "preview",
     "coc.preferences.enableFloatHighlight": true,
     "coc.preferences.snippetStatusText": "Ⓢ ",
@@ -92,7 +93,8 @@
     "diagnostic.checkCurrentLine": true,
     "diagnostic.virtualTextPrefix": " ❯❯❯ ",
     "diagnostic.virtualText": true,
-    "codeLens.enable": true,
+    "codeLens.enable": false,
+    "codeLens.position": "top",
     "list.previewHighlightGroup": "Statement",
     "list.previewSplitRight": true,
     "coc.preferences.formatOnSaveFiletypes": [

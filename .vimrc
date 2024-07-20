@@ -325,5 +325,7 @@ nnoremap <C-k> ggvG$=''
 "autocmd BufWrite *.cc,*.cpp,*.h silent! normal ggvG$=''
 autocmd BufWrite *.py :Autoformat
 autocmd BufWrite *.go :Autoformat
+let g:formatters_javascript = ['prettier']
+autocmd BufWrite *.js :Autoformat
 "在项目根目录下创建一个.clang-format，并指定style，例如：google
 autocmd BufWrite *.cpp,*.cc,*.h :Autoformat

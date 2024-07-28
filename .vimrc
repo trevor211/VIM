@@ -69,7 +69,11 @@ let g:coc_global_extensions = [
             \ 'coc-vimlsp',
             \ 'coc-json',
             \ 'coc-jedi',
-            \ 'coc-go'
+            \ 'coc-go',
+            \ 'coc-tsserver',
+            \ 'coc-html',
+            \ 'coc-wxml',
+            \ 'coc-css'
             \]
 let g:plug_timeout = 300
 let g:plug_threads = 16
@@ -102,8 +106,11 @@ Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-fugitive'
 
 "Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+
+Plug 'chemzqm/wxapp.vim'
 
 call plug#end()
 
